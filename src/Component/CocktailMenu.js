@@ -10,15 +10,13 @@ class CocktailMenu extends Component {
         url: ""
     }
     componentWillMount() {
-        if (this.state.urlKey == "Non_Alcoholic") {
-            console.log("no")
+        if (this.state.urlKey === "Non_Alcoholic") {
             this.setState({ url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic" });
         } else {
             this.setState({ url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${this.state.urlKey}` });
         }
     }
     componentDidMount() {
-        console.log(this.state.urlKey)
         fetch(this.state.url)
             .then(response => response.json())
             .then(json => {
@@ -28,13 +26,14 @@ class CocktailMenu extends Component {
     }
     render() {
         return (
-            <div className="test">
+            <div className="cocktailMenu">
                 {this.state.data.map((elt, i) => 
                     <CocktailItem
                         key={i}
                         urlKey={this.state.urlKey}
                         id={i}
                         strDrinkThumb={elt.strDrinkThumb}
+                        name={elt.strDrink}
                     />
                 )}
                 <Route path={`/${this.state.urlKey}/:id`} render={props => <DetailPage urlKey={this.state.urlKey} {...props} />}>

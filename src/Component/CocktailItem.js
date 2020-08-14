@@ -6,7 +6,8 @@ import {
 const CocktailItem = (props) => {
     return ( 
         <div className="cocktailItem">
-            <Link to={`/${props.urlKey}/${props.id}`}><img src={props.strDrinkThumb} alt=""/></Link>
+            <Link to={`/${props.urlKey}/${props.id}`}><img src={props.strDrinkThumb} alt="" /></Link>
+            <h2>{props.name}</h2>
         </div>
      );
 }

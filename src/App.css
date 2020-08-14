@@ -1,8 +1,10 @@
-body{
-  position: relative;
+/* test css */
+.cocktailMenu{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .detailPage{
-  position: absolute;
+  position: fixed;
   width: 90%;
   height: 90vh;
   top: 0;
@@ -12,3 +14,4 @@ body{
 .detailPage img{
   width: 300px;
 }
+/* test css */

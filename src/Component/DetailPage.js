@@ -9,7 +9,7 @@ class DetailPage extends Component {
         id: this.props.match.params.id
     }
     componentWillMount() {
-        if (this.state.urlKey == "Non_Alcoholic") {
+        if (this.state.urlKey === "Non_Alcoholic") {
             this.setState({ url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic" });
         } else {
             this.setState({ url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${this.state.urlKey}` });
