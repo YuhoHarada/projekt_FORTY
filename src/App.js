@@ -1,13 +1,74 @@
 import React from 'react';
-import './App.css';
-import Test from './Component/Test';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import './App.css'
+import CocktailMenu from './Component/CocktailMenu';
+import MenuItem from './Component/MenuItem';
 
-function App() {
-  return (
-    <div className="App">
-      <Test />
-    </div>
-  );
+const menuList = [
+  {
+    url: "gin",
+    name: "Gin",
+    text: "Lorem ipsum dolor sit"
+  },
+  {
+    url: "vodka",
+    name: "Vodka",
+    text: "Lorem ipsum dolor sit"
+  },
+  {
+    url: "rum",
+    name: "Rum",
+    text: "Lorem ipsum dolor sit"
+  },
+  {
+    url: "scotch",
+    name: "Scotch",
+    text: "Lorem ipsum dolor sit"
+  },
+  {
+    url: "Non_Alcoholic",
+    name: "Non-Alcoholic",
+    text: "Lorem ipsum dolor sit"
+  },
+  {
+    url: "random",
+    name: "Zufälliges Getränk",
+    text: "Lorem ipsum dolor sit"
+  },
+]
+
+const App = () => {
+    return (
+      <div className="App">
+        <Router>
+          {/* Hero */}
+          <Switch>
+            <Route path="/" exact>
+              <div className="menu">
+                {menuList.map((elt, i) => 
+                  <MenuItem
+                    key={i}
+                    url={elt.url}
+                    name={elt.name}
+                    text={elt.text.toUpperCase()}
+                  />
+                )}
+              </div>
+            </Route>
+            <Route path="/random" exact>
+            </Route>
+            <Route path="/:id" component={CocktailMenu}>
+            </Route>
+          </Switch>
+          {/* Footer */}
+        </Router>
+      </div>
+    );
 }
 
 export default App;

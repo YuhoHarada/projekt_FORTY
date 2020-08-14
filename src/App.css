@@ -1,0 +1,14 @@
+body{
+  position: relative;
+}
+.detailPage{
+  position: absolute;
+  width: 90%;
+  height: 90vh;
+  top: 0;
+  right: 0;
+  background: #ddd;
+}
+.detailPage img{
+  width: 300px;
+}
