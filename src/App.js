@@ -9,6 +9,7 @@ import CocktailMenu from './Component/CocktailMenu';
 import MenuItem from './Component/MenuItem';
 import Hero from "./Component/Hero";
 import Footer from "./Component/Footer";
+import RandomCocktail from './Component/RandomCocktail';
 
 const menuList = [
   {
@@ -43,7 +44,7 @@ const menuList = [
   },
 ]
 
-const App = () => {
+const App = (props) => {
     return (
       <div className="App">
         <Router>
@@ -61,7 +62,7 @@ const App = () => {
                 )}
               </div>
             </Route>
-            <Route path="/random" exact>
+            <Route path="/random" exact render={props => <RandomCocktail {...props} />}>
             </Route>
             <Route path="/:id" component={CocktailMenu}>
             </Route>
