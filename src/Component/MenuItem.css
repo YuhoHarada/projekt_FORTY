@@ -1,0 +1,80 @@
+.menu {
+  background: linear-gradient(180deg, #0d0f18, #262b46);
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 30px;
+  gap: 20px;
+}
+.menu .menuItem {
+  text-transform: uppercase;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: gradient 10s ease infinite;
+  border-radius: 10px;
+}
+.menu .menuItem h2 {
+  padding-bottom: 1vh;
+}
+.menu .menuItem p {
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+.menu .menuItemLink {
+  text-decoration: none;
+  color: #262b46;
+  font-size: 1.2em;
+}
+.menu .menuItem:nth-of-type(1) {
+  background: linear-gradient(-45deg, #87c4a4, #6fc3df, #8d82c4, #ec8d81);
+  background-size: 400% 400%;
+}
+.menu .menuItem:nth-of-type(2) {
+  background: linear-gradient(-45deg, #87c4a4, #8d82c4, #6fc3df, #ec8d81);
+  background-size: 400% 400%;
+}
+.menu .menuItem:nth-of-type(3) {
+  background: linear-gradient(-45deg, #87c4a4, #8ea9e8, #e7b788, #6fc3df);
+  background-size: 400% 400%;
+}
+.menu .menuItem:nth-of-type(4) {
+  background: linear-gradient(-45deg, #8ea9e8, #ec8d81, #87c4a4, #6fc3df);
+  background-size: 400% 400%;
+}
+.menu .menuItem:nth-of-type(5) {
+  background: linear-gradient(-45deg, #8d82c4, #e7b788, #ec8d81, #87c4a4);
+  background-size: 400% 400%;
+}
+.menu .menuItem:nth-of-type(6) {
+  background: linear-gradient(-45deg, #6fc3df, #87c4a4, #8ea9e8, #e7b788);
+  background-size: 400% 400%;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .menu {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+}

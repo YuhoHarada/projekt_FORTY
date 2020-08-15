@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Route } from "react-router-dom";
-import CocktailItem from './CocktailItem';
-import DetailPage from './DetailPage';
+import DetailCocktail from './DetailCocktail';
 
-class CocktailMenu extends Component {
+class DetailPage extends Component {
     state = {
         data: [],
-        urlKey: this.props.match.params.id,
-        url: ""
+        urlKey: this.props.urlKey,
+        url: "",
+        id: this.props.match.params.id
     }
     componentWillMount() {
         if (this.state.urlKey === "Non_Alcoholic") {
@@ -20,27 +19,23 @@ class CocktailMenu extends Component {
         fetch(this.state.url)
             .then(response => response.json())
             .then(json => {
-                console.log(json.drinks)
-                this.setState({ data: json.drinks });
+                let newData = json.drinks.splice(this.state.id, 1)
+                this.setState({ data: newData });
             })
     }
     render() {
         return (
-            <div className="cocktailMenu">
-                {this.state.data.map((elt, i) =>
-                    <CocktailItem
+            <div className="detailPage">
+                {this.state.data.map((elt, i) => 
+                    <DetailCocktail
                         key={i}
-                        urlKey={this.state.urlKey}
-                        id={i}
                         strDrinkThumb={elt.strDrinkThumb}
-                        name={elt.strDrink}
+                        strDrink={elt.strDrink}
                     />
                 )}
-                <Route path={`/${this.state.urlKey}/:id`} render={props => <DetailPage urlKey={this.state.urlKey} {...props} />}>
-                </Route>
             </div>
         );
     }
 }
 
-export default CocktailMenu;
+export default DetailPage;
