@@ -3,7 +3,6 @@ import { Route } from "react-router-dom";
 import CocktailItem from './CocktailItem';
 import DetailPage from './DetailPage';
 import "./CocktailMenu.css"
-import Hero from "./Hero"
 
 class CocktailMenu extends Component {
     state = {

@@ -36,6 +36,7 @@
   position: fixed;
   top: 0.6em;
   left: 5em;
+  z-index: 999;
 }
 .hero .headerTitle {
   color: rgba(255, 255, 255, 0.9);
@@ -72,7 +73,7 @@
 }
 .rum .welcomeSection {
   background: linear-gradient(rgba(4, 69, 118, 0.3), rgba(64, 64, 67, 0.3)),
-    url(/RumHero.jpg) center/cover no-repeat;
+    url(/RumHero3.jpg) center/cover no-repeat;
 }
 .scotch .welcomeSection {
   background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),

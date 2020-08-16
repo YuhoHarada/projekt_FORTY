@@ -1,14 +1,12 @@
 import React from 'react';
-import {
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Hero.css"
 
 const Hero = (props) => {
     return (
         <div className={`hero ${props.page}`}>
             <section className="welcomeSection">
-                <header className="headerHero">
+                <header className="headerHero" id="hero">
                     <ul>
                         <li>
                             <a className="logo" href="#"><img src="/FRTY-Logo-white.svg" alt="" /></a>

@@ -1,9 +1,6 @@
 import React from 'react';
 import "./CocktailItem.css"
-
-import {
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CocktailItem = (props) => {
     return ( 

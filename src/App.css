@@ -14,54 +14,6 @@ body {
 }
 
 /* test css */
-/* .cocktailMenu{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
-.detailPage{
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  background: #000000cc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.detailCocktail{
-}
-
-/* .detailCocktail{
-  width: calc(70% - 50px);
-  height: calc(80vh - 50px);
-  background: #ccc;
-  padding: 50px;
-  overflow: scroll;
-}
-.detailPage img{
-  width: 300px;
-}
-#close{
-  font-size: 5em;
-  position: absolute;
-  top: calc(0px + 10vh);
-  right: calc(0px + 15vw);
-}
-#left{
-  font-size: 5em;
-  position: absolute;
-  top: calc(50vh - 47px);
-  left: calc(0px + 10vw);
-  color: white;
-}
-#right{
-  font-size: 5em;
-  position: absolute;
-  top: calc(50vh - 47px);
-  right: calc(0px + 10vw);
-  color: white;
-} */
 .randomCocktail #left,
 .randomCocktail #right{
   display: none;
