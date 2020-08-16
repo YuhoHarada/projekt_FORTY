@@ -1,53 +1,59 @@
-#hero {
+.hero {
   font-family: "Dosis", sans-serif;
   letter-spacing: 2px;
 }
-#hero .headerHero {
+.hero .headerHero {
   color: black;
   list-style: none;
   width: 90%;
   margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 2vh 2%;
+  background: rgba(28, 28, 28, 0.5);
 }
-#hero .headerHero ul {
+.hero .headerHero ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
 }
-#hero .headerHero ul li:nth-of-type(1) {
+.hero .headerHero ul li:nth-of-type(1) {
   width: 100%;
 }
-#hero .headerHero ul li:nth-of-type(2) {
+.hero .headerHero ul li:nth-of-type(2) {
   width: 100%;
   text-align: center;
   align-self: center;
 }
-#hero .headerHero ul li:nth-of-type(3) {
+.hero .headerHero ul li:nth-of-type(3) {
   width: 100%;
   text-align: right;
   align-self: center;
 }
-#hero .logo {
+.hero .logo {
   width: 11em;
   position: fixed;
   top: 0.6em;
   left: 5em;
 }
-#hero .headerTitle {
-  color: rgba(255, 255, 255, 0.5);
+.hero .headerTitle {
+  color: rgba(255, 255, 255, 0.9);
   font-size: 2em;
   font-weight: 500;
   font-family: "Berkshire Swash", cursive;
 }
-#hero .menuLink {
+.hero .menuLink {
   color: white;
+  font-weight: 600;
   font-size: 1.2em;
   text-decoration: none;
+  transition: all 0.5s ease;
 }
-#hero .welcomeSection {
+.hero .menuLink:hover {
+  color: #ec8d81;
+}
+.hero .welcomeSection {
   height: 100vh;
   background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),
     url(/bg-image.png) center/cover no-repeat;
@@ -56,16 +62,45 @@
   align-items: flex-end;
   justify-content: center;
 }
-#hero .overlayBorder {
+.gin .welcomeSection {
+  background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),
+    url(/GinHero.jpg) center/cover no-repeat;
+}
+.vodka .welcomeSection {
+  background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),
+    url(/VodkaHero.jpg) center/cover no-repeat;
+}
+.rum .welcomeSection {
+  background: linear-gradient(rgba(4, 69, 118, 0.3), rgba(64, 64, 67, 0.3)),
+    url(/RumHero.jpg) center/cover no-repeat;
+}
+.scotch .welcomeSection {
+  background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),
+    url(/ScotchHero.jpg) center/cover no-repeat;
+}
+.scotch .welcomeSection {
+  background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),
+    url(/ScotchHero.jpg) center/cover no-repeat;
+}
+.Non_Alcoholic .welcomeSection {
+  background: linear-gradient(rgba(4, 69, 118, 0.2), rgba(64, 64, 67, 0.2)),
+    url(/nonAlkoholicHero.jpg) center/cover no-repeat;
+}
+.random .welcomeSection {
+  background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),
+    url(/RandomHero.jpg) center/cover no-repeat;
+}
+
+.hero .overlayBorder {
   background: rgba(28, 28, 28, 0.5);
   height: 100vh;
   width: 40%;
   margin-top: 20vh;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top-left-radius: 20px;
 }
-#hero .welcomeText {
+.hero .welcomeText {
   color: white;
   border-bottom: none;
   width: 100%;
@@ -74,32 +109,43 @@
   flex-direction: column;
   justify-content: center;
 }
-#hero .title h1 {
+.hero .title h1 {
   color: white;
   font-size: 6.5em;
   font-weight: 500;
   font-family: "Berkshire Swash", cursive;
 }
-#hero .title {
+.hero .title {
   position: relative;
 }
-#hero .title h1:nth-of-type(1) {
+.hero .title h1:nth-of-type(1) {
   position: absolute;
   top: -6rem;
   left: 2rem;
 }
-#hero .title h1:nth-of-type(2) {
+.hero .title h1:nth-of-type(2) {
   font-size: 10em;
   position: absolute;
   top: -1rem;
   left: 4.5rem;
 }
-#hero .title h1:nth-of-type(3) {
+.hero .title h1:nth-of-type(3) {
   position: absolute;
   top: 1rem;
   left: 12rem;
 }
-#hero .welcomeText h2 {
+
+.Non_Alcoholic .title h1:nth-of-type(1) {
+  font-size: 5em;
+}
+.Non_Alcoholic .title h1:nth-of-type(2) {
+  display: none;
+}
+.Non_Alcoholic .title h1:nth-of-type(3) {
+  left: 4rem;
+}
+
+.hero .welcomeText h2 {
   font-size: 1.5em;
   font-weight: 500;
   padding: 2vh 0 4vh 0;
@@ -108,7 +154,7 @@
   margin-top: 20vh;
   transform: translateX(5rem);
 }
-#hero .searchWrap .input {
+.hero .searchWrap .input {
   outline: none;
   border: none;
   background: none;
@@ -122,12 +168,12 @@
   letter-spacing: 1px;
   width: 40%;
 }
-#hero .searchWrap {
+.hero .searchWrap {
   display: flex;
   align-items: center;
   padding-left: 5rem;
 }
-#hero .searchBtn {
+.hero .searchBtn {
   outline: none;
   background: none;
   border: none;
@@ -135,12 +181,12 @@
   border-radius: 10px;
   margin-left: 20px;
 }
-#hero .fa-search {
+.hero .fa-search {
   color: black;
   font-size: 2em;
   padding: 10px;
 }
-#hero .searchWrap ::placeholder {
+.hero .searchWrap ::placeholder {
   color: rgb(34, 34, 34);
   text-align: center;
   font-weight: 300;
@@ -148,12 +194,12 @@
   font-family: "Dosis", sans-serif;
   letter-spacing: 2px;
 }
-#hero .arrowWrap {
+.hero .arrowWrap {
   position: relative;
   transition: 1s ease-in;
   text-align: center;
 }
-#hero .scrollIcon {
+.hero .scrollIcon {
   margin-top: 5vh;
   font-size: 2em;
   position: absolute;
@@ -174,125 +220,155 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-  #hero .welcomeSection {
+  .hero .welcomeSection {
     height: 100vh;
     background: linear-gradient(rgba(4, 69, 118, 0.2), rgba(64, 64, 67, 0.2)),
       url(/bg-image.png) center/cover no-repeat;
     display: block;
     text-align: center;
   }
-  #hero .overlayBorder {
+  .hero .overlayBorder {
     width: 90%;
     margin: 0 auto;
     margin-top: 20vh;
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     border-top-right-radius: 20px;
   }
-  #hero .welcomeText {
+  .hero .welcomeText {
     justify-content: flex-start;
     position: static;
   }
-  #hero .title h1 {
+  .hero .title h1 {
     font-size: 4em;
   }
-  #hero .title {
+  .hero .title {
     position: static;
   }
-  #hero .title h1:nth-of-type(1) {
+  .hero .title h1:nth-of-type(1) {
     position: static;
     transform: translateY(1em);
   }
-  #hero .title h1:nth-of-type(2) {
+  .hero .title h1:nth-of-type(2) {
     font-size: 8em;
     position: static;
     transform: translateX(-1.3em);
   }
-  #hero .title h1:nth-of-type(3) {
+  .hero .title h1:nth-of-type(3) {
     position: static;
     transform: translateY(-1.4em);
   }
-  #hero .welcomeText h2 {
+  .hero .welcomeText h2 {
     font-size: 1.3em;
     width: 70%;
     margin: 0 auto;
     transform: none;
     margin-top: -9vh;
   }
-  #hero .searchWrap {
+  .hero .searchWrap {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 0;
   }
-  #hero .arrowWrap {
+  .hero .arrowWrap {
     width: 95%;
+  }
+  .Non_Alcoholic .title h1:nth-of-type(1) {
+    font-size: 5em;
+  }
+  .Non_Alcoholic .title h1:nth-of-type(2) {
+    display: none;
+  }
+  .Non_Alcoholic .title h1:nth-of-type(3) {
+    display: none;
+  }
+  .Non_Alcoholic .welcomeText h2 {
+    width: 70%;
+    margin: 0 auto;
+    transform: none;
+    margin-top: 12vh;
   }
 }
 
 @media (max-width: 767px) {
-  #hero .headerHero ul {
+  .hero .headerHero ul {
     grid-template-columns: 1fr;
   }
-  #hero .headerHero ul li:nth-of-type(3) {
+  .hero .headerHero ul li:nth-of-type(3) {
     text-align: center;
   }
-  #hero .logo {
+  .hero .logo {
     width: 9em;
     position: fixed;
     top: 2em;
     left: 2em;
   }
-  #hero .welcomeSection {
+  .hero .welcomeSection {
     height: 100vh;
     background: linear-gradient(rgba(4, 69, 118, 0.2), rgba(64, 64, 67, 0.2)),
       url(/bg-image.png) center/cover no-repeat;
     display: block;
     text-align: center;
   }
-  #hero .overlayBorder {
+  .hero .overlayBorder {
     width: 90%;
     margin: 0 auto;
     margin-top: 20vh;
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     border-top-right-radius: 20px;
   }
-  #hero .welcomeText {
+  .hero .welcomeText {
     justify-content: flex-start;
     position: static;
   }
-  #hero .title h1 {
+  .hero .title h1 {
     font-size: 4em;
   }
-  #hero .title {
+  .hero .title {
     position: static;
   }
-  #hero .title h1:nth-of-type(1) {
+  .hero .title h1:nth-of-type(1) {
     position: static;
     transform: translateY(0.8em);
   }
-  #hero .title h1:nth-of-type(2) {
+  .hero .title h1:nth-of-type(2) {
     font-size: 8em;
     position: static;
     transform: translateX(-1.1em);
   }
-  #hero .title h1:nth-of-type(3) {
+  .hero .title h1:nth-of-type(3) {
     position: static;
     transform: translateY(-1.6em);
   }
-  #hero .welcomeText h2 {
+  .hero .welcomeText h2 {
     font-size: 1.3em;
     width: 80%;
     margin: 0 auto;
     transform: none;
     margin-top: -12vh;
   }
-  #hero .searchWrap {
+  .hero .searchWrap {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 0;
   }
-  #hero .arrowWrap {
+  .hero .arrowWrap {
     width: 95%;
+  }
+  .Non_Alcoholic .title h1:nth-of-type(1) {
+    font-size: 4em;
+  }
+  .Non_Alcoholic .title h1:nth-of-type(2) {
+    display: none;
+  }
+  .Non_Alcoholic .title h1:nth-of-type(3) {
+    display: none;
+  }
+  .Non_Alcoholic .welcomeText h2 {
+    width: 70%;
+    margin: 0 auto;
+    transform: none;
+    margin-top: 10vh;
   }
 }

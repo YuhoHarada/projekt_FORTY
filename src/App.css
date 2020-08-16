@@ -6,10 +6,10 @@
   padding: 0;
 }
 /* test css */
-.cocktailMenu{
+/* .cocktailMenu{
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
+} */
 .detailPage{
   position: fixed;
   width: 100%;

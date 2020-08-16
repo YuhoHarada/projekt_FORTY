@@ -1,0 +1,21 @@
+.cocktailMenu {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 3em;
+    gap: 3em;
+    background: linear-gradient(180deg, #0d0f18, #262b46);
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .cocktailMenu{
+       grid-template-columns: repeat(2,1fr); 
+    }
+}
+
+@media (max-width: 767px){
+    .cocktailMenu{
+        grid-template-columns: 1fr; 
+    }
+}

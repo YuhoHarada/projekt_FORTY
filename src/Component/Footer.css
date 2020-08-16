@@ -16,7 +16,7 @@
 #footer .footerText p {
   font-size: 1.2em;
   margin-bottom: 10vh;
-    width: 70%;
+  width: 70%;
 }
 #footer .footerBottomWrap {
   color: black;
@@ -33,9 +33,9 @@
   grid-template-columns: repeat(3, 1fr);
 }
 #footer .footerPhoto {
-  height: 75vh;
-  bottom: -3.5em;
-  right: 1em;
+  height: auto;
+  bottom: -1.5em;
+  right: 0em;
   position: absolute;
 }
 #footer .footerBottomWrap h3 {
@@ -62,6 +62,10 @@
   color: white;
   text-decoration: none;
   font-size: 1.1em;
+  transition: all 0.5s ease;
+}
+#footer .footerLinksWrap a:hover {
+  color: #ec8d81;
 }
 #footer .socialIconsWrap {
   padding: 1vh 2%;
@@ -69,9 +73,12 @@
   align-items: center;
 }
 #footer .socialIconsWrap i {
-  transition: all 1s;
+  transition: all 0.5s ease;
   font-size: 1.8em;
   color: #87c4a4;
+}
+#footer .socialIconsWrap i:hover {
+  color: white;
 }
 #footer .fa-twitter {
   animation: swing 1s infinite ease-in-out;
@@ -151,21 +158,20 @@
   #footer .footerLinksWrap a {
     font-size: 1em;
   }
-
   #footer .socialIconsWrap {
     justify-content: center;
   }
   #footer .footerText {
     text-align: center;
   }
-  #footer .footerText p{
+  #footer .footerText p {
     width: 70%;
     margin: 0 auto;
     padding-bottom: 10vh;
   }
-  #footer .toTopArrow{
-      animation: none;
-      position: static;
+  #footer .toTopArrow {
+    animation: none;
+    position: static;
   }
   #footer .arrowToTopWrap {
     position: static;
@@ -194,7 +200,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  #footer .footerText p{
+  #footer .footerText p {
     width: 70%;
     margin: 0 auto;
     padding-bottom: 10vh;
@@ -203,11 +209,11 @@
     position: static;
     margin: 0 auto;
   }
-  #footer .toTopArrow{
+  #footer .toTopArrow {
     animation: none;
     position: static;
     color: white;
     font-size: 2em;
     text-decoration: none;
-}
+  }
 }

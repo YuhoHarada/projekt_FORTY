@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route } from "react-router-dom";
 import CocktailItem from './CocktailItem';
 import DetailPage from './DetailPage';
+import "./CocktailMenu.css"
+import Hero from "./Hero"
 
 class CocktailMenu extends Component {
     state = {
@@ -26,7 +28,7 @@ class CocktailMenu extends Component {
     }
     render() {
         return (
-            <div className="cocktailMenu">
+            <div className={`cocktailMenu ${this.state.urlKey}Menu`}>
                 {this.state.data.map((elt, i) =>
                     <CocktailItem
                         key={i}

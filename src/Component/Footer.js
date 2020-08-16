@@ -9,7 +9,6 @@ const Footer = () => {
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consectetur, quia delectus pariatur doloremque a quos quod, quasi qui, quo ratione magni. Tempora veritatis accusamus nam, obcaecati reiciendis doloremque voluptate!</p>
 
-
                 <div className="arrowToTopWrap">
                     <a href="#hero"><i className="fas fa-chevron-up toTopArrow"></i></a>
                 </div>
@@ -35,12 +34,8 @@ const Footer = () => {
                     <li><a href="#">DATENSCHUTZ</a></li>
                 </ul>
 
-                <div className="logoWrap">
-                    {/* <a className="logoFooter" href="#hero"><img src="/FRTY-Logo.svg" alt="logo" /></a> */}
-                    {/* <h3>Cheers!</h3> */}
+                <div className="emptyGridItem">
                 </div>
-
-
             </div>
 
             <img className="footerPhoto" src="/footer_drinkfreigestellt.png" alt="" />
