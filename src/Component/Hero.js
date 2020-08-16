@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    Link
+} from "react-router-dom";
 import "./Hero.css"
 
 const Hero = () => {
@@ -8,7 +11,7 @@ const Hero = () => {
                 <header className="headerHero">
                     <ul>
                         <li>
-                            <a className="logo" href="#hero"> <img src="/FRTY-Logo.svg" alt="" /></a>
+                            <Link className="logo" to={`/`}><img src="/FRTY-Logo.svg" alt="" /></Link>
                         </li>
                         <li className="headerTitle">Cocktails&Drinks</li>
                         <li><a className="menuLink" href="#hero">MENU</a></li>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DetailCocktail from './DetailCocktail';
+import './DetailPage.css'
 
 class DetailPage extends Component {
     state = {
@@ -68,6 +69,7 @@ class DetailPage extends Component {
                         strDrinkThumb={elt.strDrinkThumb}
                         strDrink={elt.strDrink}
                         strInstructions={elt.strInstructions}
+                        strGlass={elt.strGlass}
                         strIngredient1={elt.strIngredient1}
                         strMeasure1={elt.strMeasure1}
                         strIngredient2={elt.strIngredient2}
