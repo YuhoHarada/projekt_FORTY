@@ -1,14 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dosis:wght@300;400;500;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
 }
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Dosis', sans-serif;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 /* test css */
 /* .cocktailMenu{
   display: grid;
   grid-template-columns: 1fr 1fr;
+<<<<<<< HEAD
 } */
 .detailPage{
   position: fixed;
@@ -22,6 +31,11 @@
   align-items: center;
 }
 .detailCocktail{
+=======
+}
+
+/* .detailCocktail{
+>>>>>>> f042c20b18af88f62bbc23fd435ba550f2def147
   width: calc(70% - 50px);
   height: calc(80vh - 50px);
   background: #ccc;
@@ -50,7 +64,7 @@
   top: calc(50vh - 47px);
   right: calc(0px + 10vw);
   color: white;
-}
+} */
 .randomCocktail #left,
 .randomCocktail #right{
   display: none;
@@ -59,5 +73,6 @@
   position: fixed;
   top: 10vh;
   left: calc(50vw + 20px);
+  z-index: 99999999;
 }
 /* test css */
