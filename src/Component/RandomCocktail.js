@@ -9,26 +9,23 @@ class RandomCocktail extends Component {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
             .then(response => response.json())
             .then(json => {
-                console.log(json.drinks)
                 this.setState({ data: json.drinks })
-                console.log(this.props.history)
             })
     }
     componentDidUpdate() {
         if (document.getElementById("close") != null) {
             document.getElementById("close").addEventListener("click", () => {
-                console.log("clicked")
                 this.props.history.push(`/`)
             })
+            document.getElementById("random").addEventListener("click", () => {
+                window.location.reload(false);
+            })
         }
-    }
-    handleChange = () => {
-        window.location.reload(false);
     }
     render() { 
         return ( 
             <div className="randomCocktail">
-                <div className="detailPage">
+                <div className="detailPage" id="detail">
                     {this.state.data.map((elt, i) => 
                         <DetailCocktail
                             key={i}
@@ -69,7 +66,6 @@ class RandomCocktail extends Component {
                         />
                     )}
                 </div>
-                <button onClick={this.handleChange}>Change</button>
             </div>
          );
     }

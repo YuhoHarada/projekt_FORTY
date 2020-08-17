@@ -15,8 +15,7 @@ class Hero extends Component {
                     <header className="headerHero" id="hero">
                         <ul>
                             <li>
-                                <a className="logo" href="#"><img src="/FRTY-Logo-white.svg" alt="" /></a>
-                                <Link className="logo" to={`/`}><img src="/FRTY-Logo.svg" alt="" /></Link>
+                                <Link className="logo" to={`/`}><img src="/FRTY-Logo-white.svg" alt="" /></Link>
                             </li>
                             <li className="headerTitle">{this.props.name}</li>
                             <li><a className="menuLink" href="#inhalt">MENU</a></li>
@@ -29,7 +28,7 @@ class Hero extends Component {
                                 <h1>&amp;</h1>
                                 <h1>Drinks</h1>
                             </div>
-                            <h2>{`Welcome to the world of ${this.props.name} drinks!`}</h2>
+                            <h2>Welcome to the world of {this.props.name === 'Cocktails' ? "cocktail" : this.props.name} drinks!</h2>
                             <div className="searchWrap">
                                 <input className="input" type="text" placeholder="Suchtext eingeben" value={this.state.value} onChange={(event)=>this.state.handleChange(event)}></input>
                                 <button className="searchBtn" onClick={()=>this.state.handleSearch(this.props.page)}><i className="fas fa-search"></i></button>

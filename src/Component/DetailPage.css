@@ -40,6 +40,16 @@
     width: 100%;
     border-radius: 0.8em 0 0 0;
 }
+.imgSmall {
+    height: 1.2em;
+    transform: translate(0,20px);
+    z-index: 99999999;
+    cursor: pointer;
+}
+.imgSmall:hover {
+    transition: .5s ease;
+    opacity: 0.5;
+}
 #arrows {
     font-size: 3em;
     font-weight: 400;
@@ -49,9 +59,10 @@
     text-decoration: none;
     color: #fff;
     padding: 0 10%;
+    cursor: pointer;
 }
 #arrows span:hover {
-font-weight: 700;
+    font-weight: 700;
 }
 #titlePopup {
     font-family: 'Berkshire Swash', cursive;
@@ -87,6 +98,7 @@ font-weight: 700;
     top: 9vh;
     right: 6%;
     width: 40px;
+    cursor: pointer;
 }
 
 
@@ -187,4 +199,9 @@ font-weight: 700;
         top: 7.5svh;
         right: 7%;
     }
+}
+
+.randomCocktail .detailPage{
+    width: 100%;
+    height: 100vh;
 }

@@ -1,19 +1,18 @@
 .cocktailItem {
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 10px;
+    cursor: pointer;
 }
 .cocktailItem img {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.cocktailItem h2 {
-    padding: 1vh 2%;
+.cocktailItem .linkCocktailItem {
+    padding: 1vh 2% 2vh 2%;
     text-align: center;
     color: #262b46;
+    text-decoration: none;
 }
 .ginMenu .cocktailItem{
     background:  #6FC3DF;
@@ -29,4 +28,10 @@ background: #8D82C4;
 }
 .Non_AlcoholicMenu .cocktailItem{
     background: #8EA9E8;
+}
+
+@media (max-width: 767px){
+    .cocktailItem h2 {
+        font-size: 1.1em;
+    }
 }

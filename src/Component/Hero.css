@@ -52,7 +52,7 @@
   transition: all 0.5s ease;
 }
 .hero .menuLink:hover {
-  color: #ec8d81;
+  color: #8ea9e8;
 }
 .hero .welcomeSection {
   height: 100vh;
@@ -91,7 +91,6 @@
   background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),
     url(/RandomHero.jpg) center/cover no-repeat;
 }
-
 .hero .overlayBorder {
   background: rgba(28, 28, 28, 0.5);
   height: 100vh;
@@ -135,7 +134,6 @@
   top: 1rem;
   left: 12rem;
 }
-
 .Non_Alcoholic .title h1:nth-of-type(1) {
   font-size: 5em;
 }
@@ -145,7 +143,6 @@
 .Non_Alcoholic .title h1:nth-of-type(3) {
   left: 4rem;
 }
-
 .hero .welcomeText h2 {
   font-size: 1.5em;
   font-weight: 500;
@@ -154,6 +151,7 @@
   text-transform: uppercase;
   margin-top: 20vh;
   transform: translateX(5rem);
+  -ms-transform: translateX(5rem);
 }
 .hero .searchWrap .input {
   outline: none;
@@ -171,7 +169,6 @@
 }
 .hero .searchWrap {
   display: flex;
-  align-items: center;
   padding-left: 5rem;
 }
 .hero .searchBtn {
@@ -204,19 +201,68 @@
   margin-top: 5vh;
   font-size: 2em;
   position: absolute;
+  -webkit-animation: top-bottom-animation 1.5s infinite;
+  -moz-animation: top-bottom-animation 1.5s infinite;
+  -o-animation: top-bottom-animation 1.5s infinite;
   animation: top-bottom-animation 1.5s infinite;
   color: white;
+}
+
+/* animation in different browsers */
+@-webkit-keyframes top-bottom-animation {
+  0% {
+    top: 0;
+    opacity: 0.1;
+  }
+  50% {
+    top: 25px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    opacity: 0.1;
+  }
+}
+@-moz-keyframes top-bottom-animation {
+  0% {
+    top: 0;
+    opacity: 0.1;
+  }
+  50% {
+    top: 25px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    opacity: 0.1;
+  }
+}
+@-o-keyframes top-bottom-animation {
+  0% {
+    top: 0;
+    opacity: 0.1;
+  }
+  50% {
+    top: 25px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    opacity: 0.1;
+  }
 }
 @keyframes top-bottom-animation {
   0% {
     top: 0;
+    opacity: 0.1;
   }
   50% {
     top: 25px;
-    opacity: 0.1;
+    opacity: 1;
   }
   100% {
     top: 0;
+    opacity: 0.1;
   }
 }
 
@@ -248,22 +294,26 @@
   .hero .title h1:nth-of-type(1) {
     position: static;
     transform: translateY(1em);
+    -ms-transform: translateY(1em);
   }
   .hero .title h1:nth-of-type(2) {
     font-size: 8em;
     position: static;
     transform: translateX(-1.3em);
+    -ms-transform: translateX(-1.3em);
   }
   .hero .title h1:nth-of-type(3) {
     position: static;
     transform: translateY(-1.4em);
+    -ms-transform: translateY(-1.4em);
   }
   .hero .welcomeText h2 {
     font-size: 1.3em;
     width: 70%;
     margin: 0 auto;
     transform: none;
-    margin-top: -9vh;
+    -ms-transform: none;
+    margin-top: -10vh;
   }
   .hero .searchWrap {
     display: flex;
@@ -287,6 +337,7 @@
     width: 70%;
     margin: 0 auto;
     transform: none;
+    -ms-transform: none;
     margin-top: 12vh;
   }
 }
@@ -331,22 +382,30 @@
   .hero .title h1:nth-of-type(1) {
     position: static;
     transform: translateY(0.8em);
+    -ms-transform: translateY(0.8em);
+    font-size: 3.5em;
   }
   .hero .title h1:nth-of-type(2) {
-    font-size: 8em;
+    font-size: 3em;
     position: static;
-    transform: translateX(-1.1em);
+    transform: translateX(0em);
+    -ms-transform: translateX(0em);
+    padding: 5vh 0;
+    opacity: 1;
   }
   .hero .title h1:nth-of-type(3) {
     position: static;
-    transform: translateY(-1.6em);
+    transform: translateY(-1em);
+    -ms-transform: translateY(-1em);
+    font-size: 3.5em;
   }
   .hero .welcomeText h2 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     width: 80%;
     margin: 0 auto;
     transform: none;
-    margin-top: -12vh;
+    -ms-transform: none;
+    margin-top: -9vh;
   }
   .hero .searchWrap {
     display: flex;
@@ -358,7 +417,7 @@
     width: 95%;
   }
   .Non_Alcoholic .title h1:nth-of-type(1) {
-    font-size: 4em;
+    font-size: 3.5em;
   }
   .Non_Alcoholic .title h1:nth-of-type(2) {
     display: none;
@@ -370,6 +429,22 @@
     width: 70%;
     margin: 0 auto;
     transform: none;
+    -ms-transform: none;
     margin-top: 10vh;
+  }
+  .hero .logo {
+    width: 9em;
+    top: 2.5em;
+    left: 1em;
+  }
+  .hero .searchWrap .input {
+    padding: 0.5em;
+  }
+  .hero .fa-search {
+    font-size: 1.4em;
+    padding: 0.5em;
+  }
+  .hero .searchWrap ::placeholder {
+    letter-spacing: 1px;
   }
 }

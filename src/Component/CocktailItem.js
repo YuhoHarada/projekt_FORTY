@@ -1,16 +1,13 @@
 import React from 'react';
 import "./CocktailItem.css"
-import { Link } from "react-router-dom";
 
 const CocktailItem = (props) => {
     return ( 
         <div className="cocktailItem" onClick={() => props.handleDetail(props.id)}>
-            {/* <Link to={`/${props.urlKey}/${props.id}`}> */}
-                <img src={props.strDrinkThumb} alt="" />
-            {/* </Link> */}
-            <h2>{props.name}</h2>
+            <img src={props.strDrinkThumb} alt="" />
+            <h2 className="linkCocktailItem">{props.name}</h2>
         </div>
-     );
+    );
 }
- 
+
 export default CocktailItem;

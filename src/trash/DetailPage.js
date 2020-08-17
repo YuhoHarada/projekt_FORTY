@@ -25,27 +25,6 @@ class DetailPage extends Component {
             document.getElementById("close").addEventListener("click", () => {
                 this.props.history.push(`/${this.props.urlKey}`)
             })
-            document.getElementById("left").addEventListener("click", () => {
-                if (this.state.id - 1 >= 0) {
-                    this.props.history.push(`/${this.props.urlKey}/${this.state.id - 1}`)
-                    window.location.reload(false);
-                }
-            })
-            if (this.state.id == 0) {
-                document.getElementById("left").style.color = "gray"
-            }
-            document.getElementById("right").addEventListener("click", () => {
-                console.log("click")
-                console.log(this.state.id)
-                if (Number(this.state.id) + 1 < this.state.data.length) {
-                    console.log(this.state.id)
-                    this.props.history.push(`/${this.props.urlKey}/${Number(this.state.id) + 1}`)
-                    window.location.reload(false);
-                }
-            })
-            if (this.state.id == this.state.data.length-1) {
-                document.getElementById("right").style.color = "gray"
-            }
         }
     }
     render() {

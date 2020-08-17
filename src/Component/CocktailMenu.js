@@ -75,6 +75,7 @@ class CocktailMenu extends Component {
             })
         document.getElementById("detail").style.height = "100vh"
         document.getElementById("detail").style.width = "100vw"
+        document.getElementById("random").style.display = "none"
         if (elt === 0) {
             document.getElementById("left").style.color = "gray"
         } else {

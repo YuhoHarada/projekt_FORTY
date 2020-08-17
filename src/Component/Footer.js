@@ -5,16 +5,15 @@ const Footer = () => {
     return (
         <footer id="footer">
             <div className="footerText">
-                <h3>Genuss Hat viele Facetten</h3>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consectetur, quia delectus pariatur doloremque a quos quod, quasi qui, quo ratione magni. Tempora veritatis accusamus nam, obcaecati reiciendis doloremque voluptate!</p>
-
+                <h3>Human creativity applied to the world of drinks</h3>
+                <p>Many different types of mixed drink recipes come from all over the world and that is why the variety is so immense.   Cocktails can be enjoyed with all your senses. In addition to the taste, various colors and aromas together awake completely new associations, and subconsciously also influence the taste.
+                But don't overdo it! Drinking cocktail is a pleasure that must be sipped slowly to savor every nuance.
+                 <span className="lineBreak">Let’s start mixing! Cheers! </span>
+                </p>
                 <div className="arrowToTopWrap">
                     <a href="#hero"><i className="fas fa-chevron-up toTopArrow"></i></a>
                 </div>
-
             </div>
-
             <div className="footerBottomWrap">
                 <ul className="socialIconsWrap">
                     <li>
@@ -27,17 +26,14 @@ const Footer = () => {
                         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
                 </ul>
-
                 <ul className="footerLinksWrap">
-                    <li><a href="#">KONTAKT</a></li>
+                    <li><a href="#">CONTACT</a></li>
                     <li><a href="#">IMPRESSUM</a></li>
-                    <li><a href="#">DATENSCHUTZ</a></li>
+                    <li><a href="#">PRIVACY</a></li>
                 </ul>
 
-                <div className="emptyGridItem">
-                </div>
+                <div className="emptyGridItem"></div>
             </div>
-
             <img className="footerPhoto" src="/footer_drinkfreigestellt.png" alt="" />
         </footer>
     );

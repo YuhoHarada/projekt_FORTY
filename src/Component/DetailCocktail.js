@@ -6,12 +6,12 @@ const DetailCocktail = (props) => {
             <article id="boxContent">
                 <article>
                     <img id="imgPopup" src={props.strDrinkThumb} alt="" />
-                    <h4 id="arrows"> <span id="left">&lt;</span><span id="right">&gt;</span></h4>
+                    <h4 id="arrows"> <span id="left">&lt;</span><img id="random" class="imgSmall" src="/random.svg" alt="" /><span id="right">&gt;</span></h4>
                 </article>
                 <article>
                     <h1 id="titlePopup">{props.strDrink}</h1>
                     <div className="overflowTxt">
-                        <p><span>Zutaten:</span></p>
+                        <p><span>Ingredients: </span></p>
                         <table>
                             <tbody>
                                 <tr>
@@ -77,9 +77,9 @@ const DetailCocktail = (props) => {
                             </tbody>
                         </table>
                         <p>
-                            <span>Zubereitung:</span>{props.strInstructions}
+                            <span>Preparation: </span>{props.strInstructions}
                         </p>
-                        <p><span>Glas:</span>{props.strGlass}</p>
+                        <p><span>Glass: </span>{props.strGlass}</p>
                     </div>
                 </article>
             </article>
