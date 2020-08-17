@@ -3,12 +3,13 @@ import "./CocktailItem.css"
 import { Link } from "react-router-dom";
 
 const CocktailItem = (props) => {
-    return ( 
+    return (
         <div className="cocktailItem">
-            <Link to={`/${props.urlKey}/${props.id}`}><img src={props.strDrinkThumb} alt="" /></Link>
-            <h2>{props.name}</h2>
+            <Link to={`/${props.urlKey}/${props.id}`}><img src={props.strDrinkThumb} alt="" />
+                <h2 className="linkCocktailItem">{props.name}</h2>
+            </Link>
         </div>
-     );
+    );
 }
- 
+
 export default CocktailItem;

@@ -26,7 +26,7 @@ const menuList = [
     },
     {
       url: "random",
-      name: "Zufälliges Getränk",
+      name: "Random Drink",
       text: "Lorem ipsum dolor sit"
     },
 ]

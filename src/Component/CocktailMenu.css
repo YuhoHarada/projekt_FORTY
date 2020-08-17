@@ -17,5 +17,7 @@
 @media (max-width: 767px){
     .cocktailMenu{
         grid-template-columns: 1fr; 
+        padding: 2em;
+        gap: 2em;
     }
 }

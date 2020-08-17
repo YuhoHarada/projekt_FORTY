@@ -25,7 +25,7 @@ const Hero = (props) => {
                         </div>
                         <h2>{`Welcome to the world of ${props.name} drinks!`}</h2>
                         <div className="searchWrap">
-                            <input className="input" type="text" name="" id="" placeholder="Suchtext eingeben"></input>
+                            <input className="input" type="text" name="" id="" placeholder="Search"></input>
                             <button className="searchBtn"><i className="fas fa-search"></i></button>
                         </div>
                         <div className="arrowWrap">
