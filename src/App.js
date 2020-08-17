@@ -25,7 +25,6 @@ class App extends Component {
   handleSearch = (page) => {
     console.log(page)
     if (page === "home") {
-      console.log(this.context.router)
       
     } else {
       this.childRef.current.NameFilter(this.state.value)
@@ -65,8 +64,8 @@ class App extends Component {
 
               <Route path='/:id' render={props =>
                 <div>
-                  <Hero page={props.match.params.id} name={menuList.find(x => x.url == props.match.params.id).name} handleSearch={this.handleSearch} handleChange={(event) => this.handleChange(event)} />
-                  <CocktailMenu {...props} ref={this.childRef}/>
+                  <Hero page={props.match.params.id} name={menuList.find(x => x.url == props.match.params.id).name} handleSearch={this.handleSearch} handleChange={(event) => this.handleChange(event)}/>
+                  <CocktailMenu {...props} ref={this.childRef} value={this.state.value}/>
                 </div>}>
               </Route>
 

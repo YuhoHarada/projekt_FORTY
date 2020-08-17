@@ -23,7 +23,7 @@ class CocktailMenu extends Component {
         if (this.state.urlKey === "Non_Alcoholic") {
             this.setState({ url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic" });
         } else if (this.state.urlKey === "search") {
-            this.setState({ url: `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=sa` }); //${this.state.value}
+            this.setState({ url: `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${this.state.value}` });
         } else {
             this.setState({ url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${this.state.urlKey}` });
         }
@@ -57,13 +57,23 @@ class CocktailMenu extends Component {
         }
     }
     NameFilter = (value) => {
-        const NewData = this.state.defaultData.filter(elt => {
-            let checkelt = false
-            elt.strDrink.toUpperCase().search(value.toUpperCase()) >= 0 ? checkelt = true : checkelt = false
-            return checkelt
-        })
-        this.setState({ data: NewData })
         this.setState({ value: value });
+        if (this.state.urlKey === "search") {
+            this.setState({ url: `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}` })
+            fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
+            .then(response => response.json())
+            .then(json => {
+                this.setState({ data: json.drinks });
+                this.setState({ defaultData: json.drinks });
+            })
+        } else {
+            const NewData = this.state.defaultData.filter(elt => {
+                let checkelt = false
+                elt.strDrink.toUpperCase().search(value.toUpperCase()) >= 0 ? checkelt = true : checkelt = false
+                return checkelt
+            })
+            this.setState({ data: NewData })
+        }
         document.documentElement.scrollTop = document.getElementById("inhalt").getBoundingClientRect().top + window.pageYOffset
     }
     handleDetail = (elt) => {
@@ -91,7 +101,7 @@ class CocktailMenu extends Component {
     render() {
         return (
             <div id="inhalt" className={`cocktailMenu ${this.state.urlKey}Menu`}>
-                {this.state.data[0] != null ? this.state.data.map((elt, i) =>
+                {this.state.data != null ? this.state.data.map((elt, i) =>
                     <CocktailItem
                         key={i}
                         urlKey={this.state.urlKey}

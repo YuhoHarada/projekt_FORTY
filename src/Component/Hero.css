@@ -87,7 +87,7 @@
   background: linear-gradient(rgba(4, 69, 118, 0.2), rgba(64, 64, 67, 0.2)),
     url(/nonAlkoholicHero.jpg) center/cover no-repeat;
 }
-.random .welcomeSection {
+.random .welcomeSection, .search .welcomeSection {
   background: linear-gradient(rgba(4, 69, 118, 0.1), rgba(64, 64, 67, 0.1)),
     url(/RandomHero.jpg) center/cover no-repeat;
 }

@@ -29,6 +29,9 @@ background: #8D82C4;
 .Non_AlcoholicMenu .cocktailItem{
     background: #8EA9E8;
 }
+.searchMenu .cocktailItem{
+    background: #8EA9E8; /* ************* für search */
+}
 
 @media (max-width: 767px){
     .cocktailItem h2 {

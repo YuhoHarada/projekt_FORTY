@@ -30,8 +30,8 @@ class Hero extends Component {
                             </div>
                             <h2>Welcome to the world of {this.props.name === 'Cocktails' ? "cocktail" : this.props.name} drinks!</h2>
                             <div className="searchWrap">
-                                <input className="input" type="text" placeholder="Suchtext eingeben" value={this.state.value} onChange={(event)=>this.state.handleChange(event)}></input>
-                                <button className="searchBtn" onClick={()=>this.state.handleSearch(this.props.page)}><i className="fas fa-search"></i></button>
+                                <input className="input" type="text" placeholder="Search" value={this.state.value} onChange={(event) => this.state.handleChange(event)}></input>
+                                {this.props.page === 'home' ? <Link to='/search' className="searchBtn"><i className="fas fa-search"></i></Link> : <button className="searchBtn" onClick={() => this.state.handleSearch(this.props.page)}><i className="fas fa-search"></i></button>}
                             </div>
                             <div className="arrowWrap">
                                 <a href="#inhalt"><i className="fas fa-chevron-down scrollIcon"></i></a>
