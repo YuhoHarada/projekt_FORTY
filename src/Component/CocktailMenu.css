@@ -19,3 +19,9 @@
         grid-template-columns: 1fr; 
     }
 }
+
+.NotFound{
+    color: #fff;
+    text-align: center;
+    grid-column: span 3;
+}

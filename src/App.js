@@ -14,7 +14,27 @@ import menuList from './Component/menuList'
 import ScrollToTop from './Component/ScrollToTop';
 
 class App extends Component {
-  state = {}
+  constructor(props) {
+    super(props);
+    this.childRef = React.createRef();
+    this.state = {
+      value: ""
+    }
+  }
+  
+  handleSearch = (page) => {
+    console.log(page)
+    if (page === "home") {
+      console.log(this.context.router)
+      
+    } else {
+      this.childRef.current.NameFilter(this.state.value)
+    }
+  }
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+  
   render() { 
     return ( 
       <div className="App">
@@ -22,7 +42,7 @@ class App extends Component {
           <ScrollToTop>
             <Switch>
               <Route path="/" exact>
-                <Hero page="home" name="Cocktails" />
+                <Hero page="home" name="Cocktails" handleSearch={this.handleSearch} handleChange={(event) => this.handleChange(event)} />
                 <div className="menu" id="inhalt">
                   {menuList.map((elt, i) =>
                     <MenuItem
@@ -45,8 +65,8 @@ class App extends Component {
 
               <Route path='/:id' render={props =>
                 <div>
-                  <Hero page={props.match.params.id} name={menuList.find(x => x.url == props.match.params.id).name} />
-                  <CocktailMenu {...props}/>
+                  <Hero page={props.match.params.id} name={menuList.find(x => x.url == props.match.params.id).name} handleSearch={this.handleSearch} handleChange={(event) => this.handleChange(event)} />
+                  <CocktailMenu {...props} ref={this.childRef}/>
                 </div>}>
               </Route>
 

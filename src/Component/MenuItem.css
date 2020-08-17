@@ -60,6 +60,9 @@
   background: linear-gradient(-45deg, #6fc3df, #87c4a4, #8ea9e8, #e7b788);
   background-size: 400% 400%;
 }
+.menu .menuItem:nth-of-type(7) {
+  display: none;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

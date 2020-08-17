@@ -28,7 +28,12 @@ const menuList = [
       url: "random",
       name: "Zufälliges Getränk",
       text: "Lorem ipsum dolor sit"
-    },
+  },
+  {
+    url: "search",
+    name: "Search",
+    text: "Lorem ipsum dolor sit"
+  },
 ]
   
 export default menuList

@@ -4,37 +4,25 @@ import './DetailPage.css'
 
 class DetailPage extends Component {
     state = {
-        data: [],
+        data: this.props.data,
         detailData:[],
         urlKey: this.props.urlKey,
         url: "",
-        id: this.props.match.params.id,
-    }
-    componentWillMount() {
-        if (this.state.urlKey === "Non_Alcoholic") {
-            this.setState({ url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic" });
-        } else {
-            this.setState({ url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${this.state.urlKey}` });
-        }
+        id: this.props.id,
     }
     componentDidMount() {
-        fetch(this.state.url)
+        console.log(this.props.data)
+        console.log(this.state.data)
+        fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${this.state.data[this.state.id].idDrink}`)
             .then(response => response.json())
             .then(json => {
-                this.setState({ data: json.drinks });
-                fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${json.drinks[this.state.id].idDrink}`)
-                    .then(response => response.json())
-                    .then(json => {
-                        console.log(json)
-                        let newData = json.drinks
-                        this.setState({ detailData: newData });
-                    })
+                let newData = json.drinks
+                this.setState({ detailData: newData });
             })
     }
     componentDidUpdate() {
         if (document.getElementById("close") != null) {
             document.getElementById("close").addEventListener("click", () => {
-                console.log("clicked")
                 this.props.history.push(`/${this.props.urlKey}`)
             })
             document.getElementById("left").addEventListener("click", () => {
