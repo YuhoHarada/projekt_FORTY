@@ -9,8 +9,8 @@ const DetailCocktail = (props) => {
                     <h4 id="arrows"> <span id="left">&lt;</span><img id="random" class="imgSmall" src="/random.svg" alt="" /><span id="right">&gt;</span></h4>
                 </article>
                 <article>
-                    <h1 id="titlePopup">{props.strDrink}</h1>
                     <div className="overflowTxt">
+                        <h1 id="titlePopup">{props.strDrink}</h1>
                         <p><span>Ingredients: </span></p>
                         <table>
                             <tbody>
