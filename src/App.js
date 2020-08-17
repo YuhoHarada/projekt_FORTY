@@ -23,7 +23,7 @@ class App extends Component {
             <Switch>
               <Route path="/" exact>
                 <Hero page="home" name="Cocktails" />
-                <div className="menu">
+                <div className="menu" id="inhalt">
                   {menuList.map((elt, i) =>
                     <MenuItem
                       key={i}
@@ -46,7 +46,7 @@ class App extends Component {
               <Route path='/:id' render={props =>
                 <div>
                   <Hero page={props.match.params.id} name={menuList.find(x => x.url == props.match.params.id).name} />
-                  <CocktailMenu {...props} />
+                  <CocktailMenu {...props}/>
                 </div>}>
               </Route>
 

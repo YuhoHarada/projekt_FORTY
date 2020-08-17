@@ -13,7 +13,7 @@ const Hero = (props) => {
                             <Link className="logo" to={`/`}><img src="/FRTY-Logo.svg" alt="" /></Link>
                         </li>
                         <li className="headerTitle">{props.name}</li>
-                        <li><a className="menuLink" href="#">MENU</a></li>
+                        <li><a className="menuLink" href="#inhalt">MENU</a></li>
                     </ul>
                 </header>
                 <div className="overlayBorder">
@@ -29,7 +29,7 @@ const Hero = (props) => {
                             <button className="searchBtn"><i className="fas fa-search"></i></button>
                         </div>
                         <div className="arrowWrap">
-                            <a href="#"><i className="fas fa-chevron-down scrollIcon"></i></a>
+                            <a href="#inhalt"><i className="fas fa-chevron-down scrollIcon"></i></a>
                         </div>
                     </article>
                 </div>

@@ -27,7 +27,7 @@ class CocktailMenu extends Component {
     }
     render() {
         return (
-            <div className={`cocktailMenu ${this.state.urlKey}Menu`}>
+            <div id="inhalt" className={`cocktailMenu ${this.state.urlKey}Menu`}>
                 {this.state.data.map((elt, i) =>
                     <CocktailItem
                         key={i}
