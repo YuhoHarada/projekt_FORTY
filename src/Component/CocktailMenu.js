@@ -9,7 +9,7 @@ class CocktailMenu extends Component {
         super(props);
         this.state = {
             counter: 0,
-            data: [{strDrink: "first"}],
+            data: [],
             urlKey: this.props.match.params.id,
             url: "",
             defaultData: [],
@@ -32,6 +32,9 @@ class CocktailMenu extends Component {
         fetch(this.state.url)
             .then(response => response.json())
             .then(json => {
+                if (json.drinks === null) {
+                    return
+                }
                 this.setState({ data: json.drinks });
                 this.setState({ defaultData: json.drinks });
             })
@@ -101,7 +104,7 @@ class CocktailMenu extends Component {
     render() {
         return (
             <div id="inhalt" className={`cocktailMenu ${this.state.urlKey}Menu`}>
-                {this.state.data != null ? this.state.data.map((elt, i) =>
+                {this.state.data.length != 0 ? this.state.data.map((elt, i) =>
                     <CocktailItem
                         key={i}
                         urlKey={this.state.urlKey}
