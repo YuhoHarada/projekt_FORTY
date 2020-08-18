@@ -75,7 +75,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .menu {
     grid-template-columns: 1fr 1fr;
   }
