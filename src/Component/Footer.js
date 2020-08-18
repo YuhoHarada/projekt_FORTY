@@ -17,19 +17,19 @@ const Footer = () => {
             <div className="footerBottomWrap">
                 <ul className="socialIconsWrap">
                     <li>
-                        <a href="https://twitter.com/home" target="_blank"><i className="fab fa-twitter"></i></a>
+                        <a href="#hero"><i className="fab fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook"></i></a>
+                        <a href="#hero"><i className="fab fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram"></i></a>
+                        <a href="#hero"><i className="fab fa-instagram"></i></a>
                     </li>
                 </ul>
                 <ul className="footerLinksWrap">
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">IMPRESSUM</a></li>
-                    <li><a href="#">PRIVACY</a></li>
+                    <li><a href="#hero">CONTACT</a></li>
+                    <li><a href="#hero">IMPRESSUM</a></li>
+                    <li><a href="#hero">PRIVACY</a></li>
                 </ul>
 
                 <div className="emptyGridItem"></div>
