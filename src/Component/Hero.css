@@ -207,6 +207,9 @@
   animation: top-bottom-animation 1.5s infinite;
   color: white;
 }
+.search .title h1:nth-of-type(2) {
+  display: none;
+}
 
 /* animation in different browsers */
 @-webkit-keyframes top-bottom-animation {
@@ -328,6 +331,9 @@
     font-size: 5em;
   }
   .Non_Alcoholic .title h1:nth-of-type(2) {
+    display: none;
+  }
+  .search .title h1:nth-of-type(2) {
     display: none;
   }
   .Non_Alcoholic .title h1:nth-of-type(3) {
