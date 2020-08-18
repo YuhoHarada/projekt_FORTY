@@ -40,7 +40,7 @@ class CocktailMenu extends Component {
             })
     }
     componentDidUpdate() {
-        if (document.getElementById("close") != null && this.state.Setting == false) {
+        if (document.getElementById("close") != null && this.state.Setting === false) {
             document.getElementById("close").addEventListener("click", () => {
                 document.getElementById("detail").style.height = "0"
                 document.getElementById("detail").style.width = "0"
@@ -104,7 +104,7 @@ class CocktailMenu extends Component {
     render() {
         return (
             <div id="inhalt" className={`cocktailMenu ${this.state.urlKey}Menu`}>
-                {this.state.data.length != 0 ? this.state.data.map((elt, i) =>
+                {this.state.data.length !== 0 ? this.state.data.map((elt, i) =>
                     <CocktailItem
                         key={i}
                         urlKey={this.state.urlKey}

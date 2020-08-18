@@ -64,7 +64,7 @@ class App extends Component {
 
               <Route path='/:id' render={props =>
                 <div>
-                  <Hero page={props.match.params.id} name={menuList.find(x => x.url == props.match.params.id).name} handleSearch={this.handleSearch} handleChange={(event) => this.handleChange(event)}/>
+                  <Hero page={props.match.params.id} name={menuList.find(x => x.url === props.match.params.id).name} handleSearch={this.handleSearch} handleChange={(event) => this.handleChange(event)}/>
                   <CocktailMenu {...props} ref={this.childRef} value={this.state.value}/>
                 </div>}>
               </Route>
