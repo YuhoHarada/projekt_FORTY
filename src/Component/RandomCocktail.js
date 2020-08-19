@@ -4,6 +4,7 @@ import DetailCocktail from './DetailCocktail'
 class RandomCocktail extends Component {
     state = {
         data: [],
+        isSet: false
     }
     componentDidMount() {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
@@ -13,13 +14,14 @@ class RandomCocktail extends Component {
             })
     }
     componentDidUpdate() {
-        if (document.getElementById("close") != null) {
+        if (document.getElementById("close") != null && this.state.isSet === false) {
             document.getElementById("close").addEventListener("click", () => {
                 this.props.history.push(`/`)
             })
             document.getElementById("random").addEventListener("click", () => {
-                window.location.reload(false);
+                this.componentDidMount()
             })
+            this.setState({ isSet: true });
         }
     }
     render() { 
